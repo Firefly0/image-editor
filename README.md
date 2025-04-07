@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+## Image Gallery Editor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React application for browsing and editing images from the Lorem Picsum API. This app allows you to browse through a gallery of images, select an image to edit, and apply various transformations such as resizing, grayscale filtering, and blur effects.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+-   Browse paginated gallery of images from Lorem Picsum
+-   View image author information
+-   Edit images with the following options:
+    -   Adjust width and height
+    -   Apply grayscale filter
+    -   Add blur effects (level 0-10)
+    -   Persistent settings through URL parameters
+    -   Responsive design
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-   Node.js 18.x (recommended: 18.18.x or higher)
+-   npm 8.x or higher
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+1. **Set up Node.js 18.x**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+If you have nvm installed:
+`bash nvm install 18.18.0 nvm use 18.18.0 `
 
-### `npm run build`
+Or download from [Node.js website](https://nodejs.org/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install dependencies**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`bash npm install `
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Start the development server**
 
-### `npm run eject`
+`bash npm start `
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This will run the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Building for Production
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To create a production build:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`bash npm run build `
 
-## Learn More
+The build artifacts will be stored in the `build/` directory, ready for deployment.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   `src/App.tsx` - Main application component with routing
+-   `src/components/GalleryPage.tsx` - Image gallery with pagination
+-   `src/components/EditPage.tsx` - Image editor with various controls
+-   `src/components/ImageCard.tsx` - Card component for displaying images
+-   `src/styles/` - CSS files for styling components
 
-### Code Splitting
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+-   React 18
+-   TypeScript
+-   React Router 6
+-   Lorem Picsum API for images
 
-### Analyzing the Bundle Size
+## API Reference
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This project uses the [Lorem Picsum API](https://picsum.photos/) for images:
 
-### Making a Progressive Web App
+-   Gallery listing: `https://picsum.photos/v2/list?page=${page}&limit=${limit}`
+-   Image by ID: `https://picsum.photos/id/${id}/${width}/${height}`
+-   Optional params: `?grayscale` and `?blur=${level}`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT](https://choosealicense.com/licenses/mit/)
