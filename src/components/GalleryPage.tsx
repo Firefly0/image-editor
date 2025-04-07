@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import { ImageData } from "../types";
 import ImageCard from "./ImageCard";
+import "../styles/GalleryPage.css";
 
 const GalleryPage: React.FC = () => {
     const [images, setImages] = useState<ImageData[]>([]);

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useSearchParams, Link } from "react-router-dom";
+import "../styles/EditPage.css";
 
 const EditPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();

@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/ImageCard.css";
 
 interface Props {
     id: string;

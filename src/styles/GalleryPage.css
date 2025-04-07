@@ -1,0 +1,35 @@
+.gallery-page {
+    padding: 30px 20px; 
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px; 
+    margin-bottom: 32px; 
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.pagination button {
+    background: #3366cc; 
+    color: white;
+    border: none;
+    padding: 7px 14px; 
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold; 
+}
+
+.pagination button:disabled {
+    opacity: 0.6;
+    background: #999;
+}
