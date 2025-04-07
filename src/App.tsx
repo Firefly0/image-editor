@@ -1,5 +1,7 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
+import GalleryPage from "./components/GalleryPage";
+import EditPage from "./components/EditPage";
 
 const App: React.FC = () => (
     <div className="app-container">
@@ -8,6 +10,8 @@ const App: React.FC = () => (
         </header>
         <main>
             <Routes>
+                <Route path="/" element={<GalleryPage />} />
+                <Route path="/edit/:id" element={<EditPage />} />
                 <Route path="*" element={<Navigate to="/" />} />
             </Routes>
         </main>
